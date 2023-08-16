@@ -19,7 +19,7 @@
 
         <q-list padding>
 
-          <q-item clickable v-ripple>
+          <q-item to="/" exact clickable v-ripple>
             <q-item-section avatar>
               <q-icon name="list" />
             </q-item-section>
@@ -29,7 +29,7 @@
             </q-item-section>
           </q-item>
 
-          <q-item clickable v-ripple>
+          <q-item to="/help" exact clickable v-ripple>
             <q-item-section avatar>
               <q-icon name="help" />
             </q-item-section>
@@ -39,7 +39,7 @@
             </q-item-section>
           </q-item>
 
-          <q-item clickable v-ripple>
+          <q-item to="/about" exact clickable v-ripple>
             <q-item-section avatar>
               <q-icon name="link" />
             </q-item-section>
@@ -63,7 +63,10 @@
     </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <keep-alive>
+        <router-view />
+      </keep-alive>
+      
     </q-page-container>
   </q-layout>
 </template>
